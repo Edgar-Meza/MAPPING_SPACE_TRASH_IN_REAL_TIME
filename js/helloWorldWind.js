@@ -39,6 +39,19 @@ const coordenadas = [
                       }
                     ]
 
+const satelites = [
+                      {
+                        lat:1.0,
+                        lon:-10.7
+                      },{
+                        lat:5.0,
+                        lon:-77.7
+                      },{
+                        lat:19.0,
+                        lon:-15.7
+                      }
+                    ]
+
 for(var i=0; i<coordenadas.length; i++){
 
   var lati = coordenadas[i].lat;
@@ -67,6 +80,41 @@ for(var i=0; i<coordenadas.length; i++){
   var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
 
   placemark.label = "Basura "+i+" ubicacion: \n" +
+      "Latitud " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
+      "Longitud " + placemark.position.longitude.toPrecision(5).toString();
+  placemark.alwaysOnTop = true;
+
+  placemarkLayer.addRenderable(placemark);
+}
+
+for(var i=0; i<satelites.length; i++){
+
+  var lati = satelites[i].lat;
+  var long = satelites[i].lon;
+
+  console.log(lati, long);
+
+
+  var placemarkLayer = new WorldWind.RenderableLayer("Placemark");
+  globoWorld.addLayer(placemarkLayer);
+
+  var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+
+  placemarkAttributes.imageOffset = new WorldWind.Offset(
+      WorldWind.OFFSET_FRACTION, 0.3,
+      WorldWind.OFFSET_FRACTION, 0.0);
+
+  placemarkAttributes.labelAttributes.color = WorldWind.Color.YELLOW;
+  placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+              WorldWind.OFFSET_FRACTION, 0.5,
+              WorldWind.OFFSET_FRACTION, 1.0);
+
+  placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/crosshair.png";
+
+  var position = new WorldWind.Position(lati, long, 100.0);
+  var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+
+  placemark.label = "satelite "+i+" ubicacion: \n" +
       "Latitud " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
       "Longitud " + placemark.position.longitude.toPrecision(5).toString();
   placemark.alwaysOnTop = true;

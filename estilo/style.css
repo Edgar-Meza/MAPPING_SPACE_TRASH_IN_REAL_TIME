@@ -11,3 +11,31 @@ h3{
   bottom: 0;
   position: absolute;
 }
+.tab-filter{
+  border: 2px solid red;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: initial;
+}
+.tab-filter h3{
+  background: rgba(255,0,0, 0.5);
+  border-radius: 15px;
+  padding: 5px;
+}
+.tab-filter div{
+  font-weight: bold;
+  font-size: 25px;
+  border-left: 10px solid green;
+  cursor: pointer;
+}
+.tab-filter div:hover{
+  color: gray;
+}
+.space{
+  background-image: url(../images/space.jpg);
+}
+.item-map{
+  color: yellow;
+  float: right;
+}

@@ -5,7 +5,7 @@ import { addObject } from './addObjects.js';
 
 const getData = (url, globoWorld, tipo) =>{
   d3.csv(url, function(err, data) {
-   for(var i=0; i<100; i++){
+   for(var i=0; i<data.length; i++){
 
 
      // Sample TLE

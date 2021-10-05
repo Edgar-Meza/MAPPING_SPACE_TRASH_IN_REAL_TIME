@@ -9,8 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/funciones.js"></script>
+    <script type="text/javascript" src="js/funcionesQuestions.js"></script>
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>Challenge</title>
   </head>
   <body class="bg-dark">
@@ -39,7 +40,7 @@
         </div>
       </div>
     </nav>
-    <div class="container text-center text-light" id="home">
+    <div class="container text-center text-light" id="home" style="position:absolute">
       <!--img src="https://th.bing.com/th/id/OIP.UI-RvlXOAFLkO0_ZKLSNagHaEK?pid=ImgDet&rs=1" alt="space-apps"-->
       <div class="question"  >
           <h1>Did you know?...</h1>
@@ -78,6 +79,15 @@
         <h3 class="txtq">There are 2,700 satelites running and they share orbit with 8,800 tons of space junk.  </h3>
         <img src="images/fact5.jpg" alt="Rocket being launched" class="fact_img">
     </div>
-
+  </div>
+  <div class="box-questions fixed-bottom">
+    <div class="questions" id="quest">
+      <input class="form-control" type="text" placeholder="Hi, I´m bot finder. Ask me what you need to know" id="input">
+      <button class="btn btn-success w-100" type="button" name="enviar" onclick="question()">enviar</button>
+    </div>
+    <div class="button-box" id="open" onclick="abrir()">
+        <i class="bi-chat-text"></i>
+    </div>
+  </div>
   </body>
 </html>

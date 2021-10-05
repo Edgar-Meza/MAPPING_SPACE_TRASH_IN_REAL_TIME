@@ -9,7 +9,7 @@
 
 ## Azure Bot Service
 
-![bot service 1](./Azure Documentation/Azure_img_1.png)
+![bot service 1](./Azure_Documentation/Azure_img_1.png)
 ![bot service 2](./Azure_Documentation/Azure_img_2.png)
 ![bot service 3](./Azure_Documentation/Azure_img_3.png)
 ![bot service 4](./Azure_Documentation/Azure_img_4.png)
